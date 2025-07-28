@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Todo App</h1>
+        </header>
+        
+        <div class="todo-container">
+            <form id="todo-form">
+                <div class="input-group">
+                    <input type="text" id="todo-input" placeholder="Add a new task..." autocomplete="off">
+                    <input type="text" id="date-picker" placeholder="Select date..." class="date-input">
+                    <button type="submit" id="add-button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </form>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            
+            <ul id="todo-list">
+                <!-- Todo items will be added here dynamically -->
+            </ul>
+            
+            <div class="todo-footer">
+                <span id="items-left">0 items left</span>
+                <button id="clear-completed">Clear Completed</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle toast-icon"></i>
+            <div class="toast-message">Task successfully added!</div>
+        </div>
+        <div class="toast-progress"></div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
